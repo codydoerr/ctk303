@@ -1,0 +1,22 @@
+.lyrics{
+	font-size: 18px;
+}
+div.lyrics{
+	overflow-y: auto;
+	height: 487px;
+	display:inline-block;
+}
+div.video{
+	display:inline-block;
+}
+.center{
+	margin: 0px auto;
+	align-items: center;
+}
+
+.cover{
+	display:inline-block;
+}
+.title{
+	display:inline-block;
+}

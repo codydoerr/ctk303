@@ -1,0 +1,60 @@
+#animcontainer{
+	width: 350px;
+	height: 350px;
+	margin: 10em auto;
+	/*background-color: black;*/
+	animation-name: initialScaleAndRotate,rotateImages;
+	animation-duration: 1s,15s;
+	animation-timing-function: linear,linear;
+	animation-iteration-count: 1,infinite;
+	animation-delay: 0s,1s;
+}
+#topcenter{
+	left:100px;
+	top:-75px;
+	animation: correctImages 15s linear infinite;
+	animation-delay: 1s;
+}
+#topleft{
+	left:-75px;
+	top:58.6881px;
+	animation: correctImages 15s linear infinite;
+	animation-delay: 1s;
+}
+#topright{
+	left:275px;
+	top:58.6881px;
+	animation: correctImages 15s linear infinite;
+	animation-delay: 1s;
+}
+#bottomleft{
+	top:275px;
+	left:-8.1559px;
+	animation: correctImages 15s linear infinite;
+	animation-delay: 1s;
+}
+#bottomright{
+	top:275px;
+	left:208.1559px;
+	animation: correctImages 15s linear infinite;
+	animation-delay: 1s;
+}
+.thumbnail{
+	position:absolute;
+	width:150px;
+	height:150px;
+	overflow: hidden;
+	border-radius: 150px;
+}
+@keyframes initialScaleAndRotate {
+	0%{transform:rotate(0deg) scale(0.0);}
+	100%{transform:rotate(360deg) scale(1);}
+}
+@keyframes rotateImages {
+	0%{transform:rotate(0deg);}
+	100%{transform:rotate(360deg)}
+}
+@keyframes correctImages{
+	0%{transform:rotate(360deg)}
+	100%{transform:rotate(0deg)}
+}

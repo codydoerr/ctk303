@@ -1,0 +1,17 @@
+html{
+	background-color: #c0c0c0;
+}
+#peekaboo {
+	width: 500px; /* 50% of viewport (window) width */
+	opacity: 0;
+	transform: translate(0,-200px);
+	transition: all .4s;
+ }
+ 
+#peekaboo.show {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.gallery{
+	
+}

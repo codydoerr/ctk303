@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="js.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Cody Doerr - JavaScript Assignment</h1>
+	<p>Hi! Check out some of my previous projects, skills and other information below!</p>
+	<h3>Scroll down for some of my previous works</h2>
+	<h2 margin="0px 0px 50px 0px">Games</h2>
+	<img class = "gallery" id = "peekaboo" src="depth.png" alt="1">
+	<img id = "peekaboo" class = "gallery" src="firekeeper.png" alt="2">
+	<img id = "peekaboo" class = "gallery" src="hologuardians.png" alt="3">
+	<h2>Languages</h2>
+	<img id = "peekaboo" class = "gallery" src="csharp.png" alt="3">
+	<img id = "peekaboo" class = "gallery" src="javascript.png" alt="3">
+	<img id = "peekaboo" class = "gallery" src="hmtl.png" alt="3">
+	<img id = "peekaboo" class = "gallery" src="java.png" alt="3">
+	<img id = "peekaboo" class = "gallery" src="css.png" alt="3">
+	<h2>Software</h2>
+	<img id = "peekaboo" class = "gallery" src="premiere.png" alt="3">
+	<img id = "peekaboo" class = "gallery" src="audition.png" alt="3">
+	<img id = "peekaboo" class = "gallery" src="illustrator.png" alt="3">
+	<img id = "peekaboo" class = "gallery" src="xd.png" alt="3">
+	<script>
+		windowScroll = 0;
+		let logo = [];
+		logo = document.getElementsByClassName("gallery");
+		function checkPosition() {
+			for (let index = 0; index < logo.length; index++) {
+				var logoTop = logo[index].offsetTop;
+				var windowScroll = window.scrollY;   
+				
+				console.log("logoTop: ", logoTop);
+				console.log("windowScroll: ", windowScroll);
+	
+				if (logoTop - windowScroll < 400) {
+					logo[index].classList.add("show");
+				} else {
+					logo[index].classList.remove("show");
+				}
+				
+			}
+		}
+		window.addEventListener("scroll",checkPosition);
+	</script>
+</body>
+</html>

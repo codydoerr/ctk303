@@ -1,25 +1,13 @@
 #animcontainer{
 	width: 350px;
 	height: 350px;
-	margin: 2em auto;
+	margin: 10em auto;
 	/*background-color: black;*/
 	animation-name: initialScaleAndRotate,rotateImages;
 	animation-duration: 1s,15s;
 	animation-timing-function: linear,linear;
 	animation-iteration-count: 1,infinite;
 	animation-delay: 0s,1s;
-}
-#infobox{
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	width: 250px;
-	color:#fff;
-	overflow:auto;
-	align-items: center;	
-	margin:0px;
-	padding:5px;
-	background-color: #798E9C;
-	border:5px solid #5A819C;
-	border-radius: 5px;
 }
 #topcenter{
 	left:100px;
@@ -63,6 +51,49 @@
 .thumbnail:hover{
 	border: 2px solid white;
 }
+@media all and (max-width: 40rem){
+	.thumbnail{position: relative;}
+	#animcontainer{
+		margin: 2em auto;
+		animation:none;
+		width: 40%;
+	}
+	#topcenter{
+		margin: 2em auto;
+		left:auto;
+		top:auto;
+		animation: moveLeftAndRight 2s ease-in-out infinite;
+		animation-delay: .1s;
+	}
+	#topleft{		
+		margin: 2em auto;
+		left:auto;
+		top:auto;
+		animation: moveLeftAndRight 2s ease-in-out infinite;
+		animation-delay: .15s;
+	}
+	#topright{
+		margin: 2em auto;
+		left:auto;
+		top:auto;
+		animation: moveLeftAndRight 2s ease-in-out infinite;
+		animation-delay: .2s;
+	}
+	#bottomleft{
+		margin: 2em auto;
+		left:auto;
+		top:auto;
+		animation: moveLeftAndRight 2s ease-in-out infinite;
+		animation-delay: .25s;
+	}
+	#bottomright{
+		margin: 2em auto;
+		left:auto;
+		top:auto;
+		animation: moveLeftAndRight 2s ease-in-out infinite;
+		animation-delay: .3s;
+	}
+}
 @keyframes initialScaleAndRotate {
 	0%{transform:rotate(0deg) scale(0.0);}
 	100%{transform:rotate(360deg) scale(1);}
@@ -74,4 +105,11 @@
 @keyframes correctImages{
 	0%{transform:rotate(360deg)}
 	100%{transform:rotate(0deg)}
+}
+@keyframes moveLeftAndRight{
+	0%{transform: translateX(0px);}
+	25%{transform: translateX(50px);}
+	50%{transform: translateX(0px);}
+	75%{transform: translateX(-50px);}
+	100%{transform: translateX(0px);}
 }

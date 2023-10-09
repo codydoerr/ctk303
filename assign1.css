@@ -10,6 +10,9 @@ footer
 	margin: 0;
 	padding: 0;
 }
+iframe{
+	border: 0xp #000;
+}
 .textcenter{
 	text-align: center;
 }
@@ -54,7 +57,21 @@ footer
 .padbottom10{
 	padding-bottom: 10px;
 }
-
+#sitegrid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+#navwrap{
+	margin: 1em auto;
+	padding:10px;
+	width:300px;
+	border:10px solid #5A819C;
+	border-radius: 10px;
+	background-color: #798E9C;
+	display: grid;
+	grid-template-columns: 1fr;
+	color:#000
+}
 #wrapper{
 	margin: 1em auto;
 	padding:10px;
